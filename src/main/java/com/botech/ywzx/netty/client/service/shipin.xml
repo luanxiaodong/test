@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<head>
+		<success>success</success>
+		<exception></exception>
+	</head>
+	<body>
+		<spzd_server>
+			<record id='1'>
+				<s_id>1</s_id>
+				<zdz>jqz</zdz>
+				<ip>192.168.3.203</ip>
+				<port>8080</port>
+				<username>admin</username>
+				<userpwd>admin</userpwd>
+			</record>
+		</spzd_server>
+		<interval>
+			<record id='1'>
+				<zdz>zd12</zdz>
+				<value>0.1</value>
+				<threshold>0</threshold>
+			</record>
+			<record id='2'>
+				<zdz>zd13</zdz>
+				<value>0.1</value>
+				<threshold>0</threshold>
+			</record>
+		</interval>
+		<spzd_camera>
+			<record id='1'>
+				<uuid>1e785f8613072816e053b803a8c037dc</uuid>
+				<cameid>610522</cameid>
+				<starttime>8:00,10:00,12:00,14:00,16:00,18:00</starttime>
+				<endtime>18:00</endtime>
+				<source>0</source>
+				<loop>1</loop>
+				<detectitems>zd12,zd13</detectitems>
+				<szusertype>spjkxt</szusertype>
+			</record>
+			<record id='2'>
+				<uuid>1e785f8613082816e053b803a8c037dc</uuid>
+				<cameid>610532</cameid>
+				<starttime>8:00,10:00,12:00,14:00,16:00,18:00</starttime>
+				<endtime>18:00</endtime>
+				<source>0</source>
+				<loop>1</loop>
+				<detectitems>zd12,zd13</detectitems>
+				<szusertype>spjkxt</szusertype>
+			</record>
+			<record id='3'>
+				<uuid>1e785f8613092816e053b803a8c037dc</uuid>
+				<cameid>610541</cameid>
+				<starttime>8:00,10:00,12:00,14:00,16:00,18:00</starttime>
+				<endtime>18:00</endtime>
+				<source>0</source>
+				<loop>1</loop>
+				<detectitems>zd12,zd13</detectitems>
+				<szusertype>spjkxt</szusertype>
+			</record>
+		</spzd_camera>
+	</body>
+</root>

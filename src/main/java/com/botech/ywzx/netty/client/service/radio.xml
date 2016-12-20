@@ -1,0 +1,70 @@
+1、信息查询请求的XML格式为：
+<?xml version="1.0" encoding="utf-8">
+<root>
+    <QueryCondition>
+        <szUser>视频质量标识</szUser>
+    </QueryCondition>
+</root>
+2、信息查询结果的XML格式为：
+<?xml version="1.0" encoding="utf-8">
+  <root>
+   <head>
+     <success>success</success>  //success 成功 fail失败，其他数值为错误代码
+     <exception>XXXX</exception> //当返回结果不为fail时，将失败原因具体描述放在此处
+   </head>
+   <body>
+    <spzd_server>//视频质量检测配置信息表
+      <record id='1'>
+        <s_id>1</s_id >
+ <zdz>jqz</zdz> //视频监控系统鉴权服务器字典值
+ <ip>192.168.3.203</ip>//视频监控系统鉴权服务器IP
+ <port>8080</port>//视频监控系统鉴权服务器端口
+ <username>admin</username>//视频监控系统鉴权服务器账号
+ <userpwd>admin</userpwd>//视频监控系统鉴权服务器密码
+      </record>
+       <s_id>2</s_id >
+ <zdz>pic</zdz> //视频质量服务截图路径字典值
+ <ip>待定</ip>//视频质量服务截图路径ip
+ <port></port>
+ <username></username>
+ <userpwd></userpwd>
+      </record>
+    </spzd_server>
+    
+    
+    
+    <interval>//视频检测单元报警值间隔上报设置
+      <record id='1'>
+        <zdz>zd01</zdz>//检测类型字典值
+        <value>0.1</value>
+        <threshold>0</threshold>
+      </record>
+      <record id='2'>
+        <zdz>zd16</zdz>//检测类型字典值
+        <value>0.1</value>
+        <threshold>0</threshold>
+      </record>
+    </interval>
+    
+    
+    
+    
+    <spzd_camera>//视频质量检测单元检测的摄像机信息表
+      <record id='1'>  //第一条任务记录
+ <uuid>摄像机uuid</uuid> //摄像机uuid
+ <cameid>摄像机逻辑编号</cameid>//摄像机逻辑编号
+ <starttime>8:00</starttime>//开始检测时间
+ <endtime>17:00</endtime>//结束检测时间
+ <source>0</source>//视频源类型
+ <loop>1</loop>//最大循环次数，历史录像检测无效
+ <detectitems>zd01,zd02</detectitems>//检测项目
+ <szusertype>10</szusertype>//所属系统标识
+      </record>
+      <record id='2'>//第二条任务记录
+       ………………
+      </record>
+    </spzd_camera>
+    
+    
+  </body>
+</root>
